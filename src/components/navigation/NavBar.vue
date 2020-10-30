@@ -1,9 +1,7 @@
 <template>
   <div class="bg-blue-300 p-2">
-    <a href="#" @click="changeComponent('cours-view')">Tous les cours</a> |
-    <a href="#" @click="changeComponent('selection-list')"
-      >Ma sélection de cours</a
-    >
+    <a href="#" @click="changeComponent('player-view')">Tous les joueurs</a> | 
+    <a href="#" @click="changeComponent('selection-list')">Ma sélection</a>
   </div>
 </template>
 
@@ -12,10 +10,12 @@ export default {
   name: "nav-bar",
   methods: {
     changeComponent(value) {
-      this.$emit("change-component", value);
-    },
-  },
-};
+      this.$emit('change-component', value)
+    }
+  }
+}
 </script>
 
-<style></style>
+<style>
+
+</style>
