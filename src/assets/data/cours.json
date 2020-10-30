@@ -1,45 +1,35 @@
 {
-  "name": "PSG",
+  "name": "Cours",
   "cours": [
     {
       "number": "1",
-      "name": "K. Navas",
-      "country": "CRI",
-      "birthDate": "15/12/86",
-      "position": "Gardien",
-      "health": "available"
+      "name": "Débuté en HTML",
+      "Date de publication": "",
+      "Disponible": ""
     },
     {
-      "number": "5",
-      "name": "Marquinhos",
-      "country": "BRE",
-      "birthDate": "14/05/94",
-      "position": "Défenseur",
-      "health": "available"
+      "number": "1",
+      "name": "Débuté en HTML",
+      "Date de publication": "",
+      "Disponible": ""
     },
     {
-      "number": "11",
-      "name": "A. DI Maria",
-      "country": "ARG",
-      "birthDate": "14/02/88",
-      "position": "Milieu",
-      "health": "out"
+      "number": "1",
+      "name": "Débuté en HTML",
+      "Date de publication": "",
+      "Disponible": ""
     },
     {
-      "number": "7",
-      "name": "K. Mbappé",
-      "country": "FRA",
-      "birthDate": "20/12/1998",
-      "position": "Attaquant",
-      "health": "available"
+      "number": "1",
+      "name": "Débuté en HTML",
+      "Date de publication": "",
+      "Disponible": ""
     },
     {
-      "number": "10",
-      "name": "Neymar",
-      "country": "BRE",
-      "birthDate": "05/02/92",
-      "position": "Attaquant",
-      "health": "available"
+      "number": "1",
+      "name": "Débuté en HTML",
+      "Date de publication": "",
+      "Disponible": ""
     }
   ]
 }
