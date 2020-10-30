@@ -2,7 +2,7 @@
   
   <div 
     class="border border-green-900 m-2 p-2 rounded flex justify-between"
-    :class="isInjuredClass"
+    :class="isUnavailableClass"
   >
     <div>
       <h3 class="text-lg font-bold">{{ courName }} ({{ cour.number }})</h3>

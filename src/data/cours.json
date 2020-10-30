@@ -12,7 +12,7 @@
       "number": "1",
       "name": "Débuté en PHP",
       "publicationdate": "10/11/20",
-      "available": "en cours",
+      "unavailable": "en cours",
       "photo": "indisponible.jpg"
     },
     {
@@ -26,7 +26,7 @@
       "number": "1",
       "name": "Projet VueJs",
       "Date de publication": "10/12/20",
-      "available": "en cours",
+      "unavailable": "en cours",
       "photo": "indisponible.jpg"
     }
   ]
