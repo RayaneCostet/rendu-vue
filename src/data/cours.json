@@ -5,25 +5,29 @@
       "number": "1",
       "name": "Débuté en HTML",
       "publicationdate": "15/10/20",
-      "available": "disponible"
+      "available": "disponible",
+      "photo": "htlm.png"
     },
     {
       "number": "1",
       "name": "Débuté en PHP",
       "publicationdate": "10/11/20",
-      "available": "en cours"
+      "available": "en cours",
+      "photo": "indisponible.jpg"
     },
     {
       "number": "1",
       "name": "Débuté en Javascript",
       "publicationdate": "20/10/20",
-      "available": "disponible"
+      "available": "disponible",
+      "photo": "java.png"
     },
     {
       "number": "1",
       "name": "Projet VueJs",
       "Date de publication": "10/12/20",
-      "available": "en cours"
+      "available": "en cours",
+      "photo": "indisponible.jpg"
     }
   ]
 }

@@ -13,7 +13,7 @@
       >
         <h3>{{ cour.name }} ({{ cour.number }})</h3>
         <span>disponible le {{ cour.publicationdate }}</span>
-        <img :src="require('../assets/img/' + player.photo)" alt="">
+        <img :src="require('../assets/img/' + cour.photo)" alt="">
       </div>
     </div>
 
