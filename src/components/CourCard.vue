@@ -31,7 +31,7 @@ export default {
     },
     isUnavailableClass() {
       return {
-        "bg-gray-600": this.courUnavailable,
+        "bg-red-600": this.courUnavailable,
         "border-white": this.courUnavailable,
         "border-black": !this.courUnavailable,
       };
