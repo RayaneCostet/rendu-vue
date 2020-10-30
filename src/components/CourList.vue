@@ -1,47 +1,56 @@
-  
 <template>
-<div>
-  <h1>Liste des cours {{ coursData.name }} </h1>
 
-  <selection-box 
-    :selection="selection"
-  >
-  </selection-box>
+  <img alt="Vue logo" src="../assets/img/logo.png">
+  <div class="flex">
+    <div class="w-1/5">
+      <selection-box
+        :selection="selection"
+      >
+      </selection-box>
+    </div>
+    
 
-  <cour-card
-    v-for="(cour, index) in coursData.cours"
-    :key="index"
-    :cour="cour"
-    @add-cour="addCourToSelection"
-    >
-  </cour-card>
-</div>
+    <div class="w-4/5 mt-2">
+      <cour-card 
+        v-for="(cour, index) in team.cours"
+        :key="index"
+        :cour="cour"
+        @add-cour="addCourToSelection"
+        >
+      </cour-card>
+    </div>
+    
+
+  </div>
+    
 </template>
-
+  
 <script>
-import coursData from '../assets/data/cours.json'
+import coursData from '../data/cours.json'
 import CourCard from './CourCard.vue'
 import SelectionBox from './SelectionBox.vue'
+
 export default {
-  name: "cour-List",
+  name: "cour-view",
   components: {
     CourCard,
     SelectionBox
   },
   data() {
     return {
-      coursData : coursData,
+      team: coursData,
       selection: []
     }
   },
   methods: {
-    addCourToSelection(cour) {
+    addCourToSelection(cour){
       this.selection.push(cour)
-      this.$emit('update-selection', cour)
+      this.$emit('child-event', cour)
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
+
 </style>
