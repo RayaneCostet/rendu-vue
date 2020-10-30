@@ -1,11 +1,11 @@
 <template>
   <div
-    class="border border-green-900 m-2 p-2 rounded flex justify-between"
+    class="border border-green-900 m-2 p-2  flex justify-between"
     :class="isUnavailableClass"
   >
     <div>
-      <h3 class="text-lg font-bold">{{ courName }} ({{ cour.number }})</h3>
-      <p>{{ cour.position }}</p>
+      <h3 class="text-lg font-bold">{{ courName }}</h3>
+      <p>{{ cour.available }} {{ cour.unavailable }}</p>
     </div>
 
     <base-button text="Sélectionner" @click="addToSelection"> </base-button>
@@ -31,7 +31,7 @@ export default {
     },
     isUnavailableClass() {
       return {
-        "bg-red-600": this.courUnavailable,
+        "bg-red-700": this.courUnavailable,
         "border-white": this.courUnavailable,
         "border-black": !this.courUnavailable,
       };
