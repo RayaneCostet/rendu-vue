@@ -1,25 +1,21 @@
 <template>
-    <div>
-        <a href="#" @click="selectComponent('cour-list')"></a>
-        <a href="#" @click="selectComponent('cour-list')"></a>
-    </div>
+  <div class="bg-blue-300 p-2">
+    <a href="#" @click="changeComponent('cours-view')">Tous les cours</a> |
+    <a href="#" @click="changeComponent('selection-list')"
+      >Ma sélection de cours</a
+    >
+  </div>
 </template>
 
 <script>
 export default {
-    name: "nav-bar",
-    data() {
-        return {
-            navigation: [
-                { name: "tous les cours", component: "cour-list" },
-                { name: "MA selection", component: "cour-list" },
-            ]
-        }
+  name: "nav-bar",
+  methods: {
+    changeComponent(value) {
+      this.$emit("change-component", value);
     },
-methods: {
-    selectedComponent(comp) {
-        this.$emit('change-component', comp)
-    }
-}
-}
+  },
+};
 </script>
+
+<style></style>
