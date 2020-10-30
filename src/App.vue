@@ -1,54 +1,58 @@
 <template>
-<div>
   <nav-bar
-    @change-component="updateSelectedComponent"
-  ></nav-bar>
-
-  <keep-alive>
+    @change-component="changeSelectedComponent"
+  >
+  </nav-bar>
+  
+  <keep-alive include="cour-list">
     <component 
       :is="selectedComponent"
       v-bind="currentProps"
-      @update-selection="updateSelection"
+      @child-event="selectionUpdate"
     >
     </component>
   </keep-alive>
-</div>
+  
 </template>
 
 <script>
+
 import CourList from './components/CourList.vue'
 import SelectionList from './components/SelectionList.vue'
 import NavBar from './components/navigation/NavBar.vue'
+
 export default {
   name: 'App',
   components: {
     CourList,
-    NavBar,
-    SelectionList
+    SelectionList,
+    NavBar
   },
   data() {
     return {
       selectedComponent: 'cour-list',
-      selectionArray: []
+      courSelection: []
     }
   },
   computed: {
     currentProps() {
-      if(this.selectedComponent == "selection-list") {
-        return { selection: this.selectionArray }
+      if(this.selectedComponent == "selection-list"){
+        return { selection: this.courSelection }
       }
       return false
-    }
+    },
   },
   methods: {
-    updateSelectedComponent(comp) {
-      this.selectedComponent = comp
+    changeSelectedComponent(value) {
+      this.selectedComponent = value
     },
-    updateSelection(cour) {
-      this.selectionArray.push(cour)
+    selectionUpdate(value) {
+      this.courSelection.push(value)
     }
   }
 }
 </script>
+
 <style>
+ 
 </style>

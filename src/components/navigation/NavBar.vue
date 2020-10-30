@@ -1,6 +1,6 @@
 <template>
   <div class="bg-blue-300 p-2">
-    <a href="#" @click="changeComponent('player-view')">Tous les joueurs</a> | 
+    <a href="#" @click="changeComponent('cour-list')">Tous les cours</a> | 
     <a href="#" @click="changeComponent('selection-list')">Ma sélection</a>
   </div>
 </template>
