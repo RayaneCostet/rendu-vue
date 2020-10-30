@@ -1,5 +1,6 @@
 <template>
-  <div
+  
+  <div 
     class="border border-green-900 m-2 p-2 rounded flex justify-between"
     :class="isInjuredClass"
   >
@@ -7,41 +8,46 @@
       <h3 class="text-lg font-bold">{{ courName }} ({{ cour.number }})</h3>
       <p>{{ cour.position }}</p>
     </div>
-
-    <base-button text="À faire" @click="addToSelection"> </base-button>
+    
+    <base-button
+      text="Sélectionner"
+      @click="addToSelection"
+    >
+    </base-button>
   </div>
 </template>
 
 <script>
 export default {
   name: "cour-card",
-  props: ["cour"],
+  props: ['cour'],
   computed: {
     courName() {
-      if (this.cour.name.split(".").length > 1) {
-        return this.cour.name.split(".")[1];
+      if(this.cour.name.split('.').length > 1){
+        return this.cour.name.split('.')[1]
       }
       return this.cour.name;
     },
-    playerInjured() {
-      if (this.cour.health == "out") {
-        return true;
+    courUnavailable() {
+      if(this.cour.available == "indisponible"){
+        return true
       }
-      return false;
+      return false
     },
-    isInjuredClass() {
-      return {
-        "bg-red-500": this.courInjured,
-        "bg-green-500": !this.courInjured,
-      };
+    isUnavailableClass() {
+      return { 
+        'bg-red-500': this.courUnavailable, 
+        'bg-green-500': !this.courUnavailable 
+        }
     },
   },
   methods: {
     addToSelection() {
-      this.$emit("add-cour", this.cour);
-    },
-  },
-};
+      this.$emit('add-cour', this.cour)
+    }
+  }
+}
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
